@@ -93,7 +93,7 @@
             <!-- column -->
             <div v-for="card in row" class="col">
               <!-- card -->
-              <div class="card" style="width: 18rem" :class="{lite: card.number_of_pages <= 50}">
+              <div class="card" :title="card.name" style="width: 18rem" :class="{lite: card.number_of_pages <= 50}">
                 <img :src="card.image" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <h5 class="card-title">{{card.name}}</h5>
