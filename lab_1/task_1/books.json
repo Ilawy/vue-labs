@@ -1,0 +1,173 @@
+[
+  {
+    "ISBN": "978-3-16-148410-0",
+    "name": "The Silent Patient",
+    "category": "Thriller",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 50,
+    "author": "Alex Michaelides",
+    "price": 15.99
+  },
+  {
+    "ISBN": "978-1-4028-9462-6",
+    "name": "The Alchemist",
+    "category": "Fiction",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 60,
+    "author": "Paulo Coelho",
+    "price": 12.99
+  },
+  {
+    "ISBN": "978-0-06-245771-4",
+    "name": "Educated",
+    "category": "Memoir",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 70,
+    "author": "Tara Westover",
+    "price": 14.99
+  },
+  {
+    "ISBN": "978-0-7432-7356-5",
+    "name": "Becoming",
+    "category": "Biography",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 65,
+    "author": "Michelle Obama",
+    "price": 18.99
+  },
+  {
+    "ISBN": "978-0-316-76948-0",
+    "name": "The Night Circus",
+    "category": "Fantasy",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 68,
+    "author": "Erin Morgenstern",
+    "price": 16.99
+  },
+  {
+    "ISBN": "978-1-5011-2630-0",
+    "name": "Where the Crawdads Sing",
+    "category": "Fiction",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 70,
+    "author": "Delia Owens",
+    "price": 17.99
+  },
+  {
+    "ISBN": "978-0-06-245773-8",
+    "name": "The Subtle Art of Not Giving a F*ck",
+    "category": "Self-help",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 60,
+    "author": "Mark Manson",
+    "price": 13.99
+  },
+  {
+    "ISBN": "978-0-06-287184-8",
+    "name": "The Vanishing Half",
+    "category": "Fiction",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 65,
+    "author": "Brit Bennett",
+    "price": 15.99
+  },
+  {
+    "ISBN": "978-1-250-20210-0",
+    "name": "The Guest List",
+    "category": "Mystery",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 70,
+    "author": "Lucy Foley",
+    "price": 14.99
+  },
+  {
+    "ISBN": "978-0-06-295365-3",
+    "name": "Daisy Jones & The Six",
+    "category": "Historical Fiction",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 66,
+    "author": "Taylor Jenkins Reid",
+    "price": 16.99
+  },
+  {
+    "ISBN": "978-1-5011-2631-7",
+    "name": "The Midnight Library",
+    "category": "Fantasy",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 64,
+    "author": "Matt Haig",
+    "price": 15.99
+  },
+  {
+    "ISBN": "978-0-06-287067-4",
+    "name": "Anxious People",
+    "category": "Fiction",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 62,
+    "author": "Fredrik Backman",
+    "price": 14.99
+  },
+  {
+    "ISBN": "978-1-250-20300-8",
+    "name": "The Invisible Life of Addie LaRue",
+    "category": "Fantasy",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 70,
+    "author": "V.E. Schwab",
+    "price": 17.99
+  },
+  {
+    "ISBN": "978-0-06-295365-3",
+    "name": "Circe",
+    "category": "Fantasy",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 66,
+    "author": "Madeline Miller",
+    "price": 15.99
+  },
+  {
+    "ISBN": "978-1-250-20301-5",
+    "name": "The Seven Husbands of Evelyn Hugo",
+    "category": "Historical Fiction",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 65,
+    "author": "Taylor Jenkins Reid",
+    "price": 16.99
+  },
+  {
+    "ISBN": "978-0-06-287067-4",
+    "name": "The Light We Lost",
+    "category": "Romance",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 60,
+    "author": "Jill Santopolo",
+    "price": 14.99
+  },
+  {
+    "ISBN": "978-1-5011-2632-4",
+    "name": "The Book Thief",
+    "category": "Historical Fiction",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 70,
+    "author": "Markus Zusak",
+    "price": 18.99
+  },
+  {
+    "ISBN": "978-0-06-245773-8",
+    "name": "Little Fires Everywhere",
+    "category": "Fiction",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 68,
+    "author": "Celeste Ng",
+    "price": 15.99
+  },
+  {
+    "ISBN": "978-1-250-20302-2",
+    "name": "Normal People",
+    "category": "Fiction",
+    "image": "https://unsplash.it/100/90",
+    "number_of_pages": 64,
+    "author": "Sally Rooney",
+    "price": 14.99
+  }
+]

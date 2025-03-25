@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">loading</div>
+
+    <template id="vue">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary"
+        style="position: sticky; top: 0; left: 0; z-index: 30"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Task 3</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="dialog-backdrop" v-if="showModal"></div>
+      <div class="dialog" v-if="showModal">
+        <h3>New Post</h3>
+        <div class="row my-3">
+          <div class="col-md-7">
+            <label for="inputEmail4" class="form-label">Title</label>
+            <input
+              type="text"
+              placeholder="Post title"
+              class="form-control"
+              v-model="result.title"
+            />
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-md-7">
+            <label for="inputEmail4" class="form-label">Categories</label>
+            <br />
+            <div class="d-flex gap-3">
+              <label v-for="category in form.categories" class="d-flex gap-1">
+                <input
+                  type="checkbox"
+                  :value="category"
+                  name="categories"
+                  v-model="result.categories"
+                />
+                {{ category }}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-md-7">
+            <label for="inputEmail4" class="form-label">Edition</label>
+            <br />
+            <select name="edition" v-model="result.edition">
+              <option value="" disabled selected>Please select</option>
+              <option :value="series" v-for="series in form.series">
+                {{series}}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-md-7">
+            <label for="inputEmail4" class="form-label">Social networks</label>
+            <br />
+            <div class="d-flex gap-3">
+              <label v-for="network in form.socialNetworks" class="d-flex gap-1">
+                <input type="checkbox" :value="network" name="networks" v-model="result.networks" />
+                {{network}}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-md-7">
+            <label class="form-label">
+              <input type="checkbox" name="publishNow" v-model="result.publishNow" />
+              Publish now
+            </label>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col">
+            <button class="btn btn-primary w-100" @click="showResult()">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <main class="p-3 container" v-if="final">
+        <div class="card">
+          <div class="card-body">
+            <h3>Result</h3>
+            <b>Title: </b> {{ final.title }}
+            <br/>
+            <b>Categories: </b> {{ final.categories.join(", ") }}
+            <br/>
+            <b>Edition: </b> {{ final.edition }}
+            <br/>
+            <b>Social networks: </b> {{ final.networks.join(", ") }}
+            <br />
+            <b>Publish now: </b> {{ final.publishNow ? "yes" : "no" }}
+          </div>
+        </div>
+      </main>
+    </template>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

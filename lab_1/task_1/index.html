@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <style>
+      .wishlist {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        height: 0vh;
+        overflow: hidden;
+        background: white;
+        transition: 325ms;
+        box-shadow: 3px 3px #00000030;
+        border: 1px solid #eee;
+        &.show {
+          padding: 1rem;
+          height: 70vh;
+        }
+      }
+
+      .lite::before{
+        content: "lite";
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        padding: .25rem 1rem;
+        border-radius: 70rem;
+        background: #eee;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">loading</div>
+
+    <template id="vue">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary"
+        style="position: sticky; top: 0; left: 0; z-index: 30"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Quotobia</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <button class="btn btn-success" @click="showWishlist = !showWishlist">
+            Toggle wishlist ({{wishlist.length}})
+          </button>
+        </div>
+      </nav>
+
+      <div class="wishlist" :class="{show: showWishlist}">
+        <h2>My Wishlist</h2>
+        <h3 v-if="!wishlist.length" class="text-center">No items yet</h3>
+        <div v-else>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Pages</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="isbn in wishlist" :set="book = getBookByISBN(isbn)">
+                <td>{{book.name}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.number_of_pages}}</td>
+                <td><button class="btn btn-danger" @click="toggleWishlistItem(book.ISBN)">Remove from wishlist</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <main class="p-3 container">
+        <div v-if="loading">loading</div>
+        <div v-else>
+          <div v-for="row in data" class="row my-4">
+            <!-- column -->
+            <div v-for="card in row" class="col">
+              <!-- card -->
+              <div class="card" style="width: 18rem" :class="{lite: card.number_of_pages <= 50}">
+                <img :src="card.image" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">{{card.name}}</h5>
+                  <p class="card-text">
+                    {{card.author}}
+                    <br>
+                    <big>{{formatPrice(card.price)}}</big>
+                  </p>
+                  <a
+                    href="#"
+                    @click.prevent="toggleWishlistItem(card.ISBN)"
+                    :class="{'btn-danger': wishlist.includes(card.ISBN)}"
+                    class="btn btn-primary"
+                  >
+                    {{ wishlist.includes(card.ISBN) ? "Remove from" : "Add to"
+                    }} wishlist
+                  </a>
+                  <span class="mx-3">{{card.number_of_pages}} pages</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </template>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

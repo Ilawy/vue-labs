@@ -1,0 +1,42 @@
+{
+  "version": "4",
+  "redirects": {
+    "https://esm.sh/@nanostores/vue": "https://esm.sh/@nanostores/vue@0.11.0",
+    "https://esm.sh/@types/lodash@~4.17.14/index.d.ts": "https://esm.sh/@types/lodash@4.17.16/index.d.ts",
+    "https://esm.sh/lodash": "https://esm.sh/lodash@4.17.21",
+    "https://esm.sh/nanostores": "https://esm.sh/nanostores@0.11.4",
+    "https://esm.sh/vue": "https://esm.sh/vue@3.5.13",
+    "https://esm.sh/vue/dist/vue.esm-bundler.js": "https://esm.sh/vue@3.5.13/dist/vue.esm-bundler.js",
+    "https://esm.sh/vue?dev": "https://esm.sh/vue@3.5.13?dev",
+    "https://esm.sh/vue@%3E=3.3.1?target=denonext": "https://esm.sh/vue@3.5.13?target=denonext"
+  },
+  "remote": {
+    "https://esm.sh/@nanostores/vue@0.11.0": "8f6b46cc5a73eb77b85a2033327a388235739537334c22b3dc2f099c04353dd4",
+    "https://esm.sh/@nanostores/vue@0.11.0/denonext/vue.mjs": "ff9b816f93440470c81fd76be115574e35b6acc58c71f6c37471af23d6f80198",
+    "https://esm.sh/@vue/compiler-core@3.5.13/denonext/compiler-core.mjs": "b6cee487d9e4918ddc46f1558643734cb3b7f777c3d62e4d3ecc7f893c8aec60",
+    "https://esm.sh/@vue/compiler-dom@3.5.13/denonext/compiler-dom.mjs": "27dc6759e88af252e1bd1238d308a3483901b273ffc635839b5065047dd1fad9",
+    "https://esm.sh/@vue/reactivity@3.5.13/denonext/reactivity.development.mjs": "9461bcc2a33c9ab0feec36f8b2b4334980d5592338796e1d5320d06f75e88487",
+    "https://esm.sh/@vue/reactivity@3.5.13/denonext/reactivity.mjs": "941c3a60455c18fd8d1a7f09782a6717e4bd4d4d1aaabb4b49bc646fdea3680c",
+    "https://esm.sh/@vue/runtime-core@3.5.13/denonext/runtime-core.development.mjs": "5b0a1a0da5f7b4ea5c46470a2df841cdb134919059f2cb13d86ada1016dca4a6",
+    "https://esm.sh/@vue/runtime-core@3.5.13/denonext/runtime-core.mjs": "0a69b560fa76042f792dd8946bd1ca67738ca7d0024d2bf469b0946cd4082063",
+    "https://esm.sh/@vue/runtime-dom@3.5.13/denonext/runtime-dom.development.mjs": "a611bcb7f9111186f23a802ac649c9e0fdfac6b801c7c843b78983369808ae91",
+    "https://esm.sh/@vue/runtime-dom@3.5.13/denonext/runtime-dom.mjs": "093f84b36a5c2eb65e1c0202215349d134d95d25c3f84153c537c9654c0a09b8",
+    "https://esm.sh/@vue/shared@3.5.13/denonext/shared.development.mjs": "620cf1fe5a41bb63b9d5ef622c5638e1f4f090e7fdda170261f20a66b920a69c",
+    "https://esm.sh/@vue/shared@3.5.13/denonext/shared.mjs": "7c5e76c8edee934e58ea2ba5a86ac62320480650e0f826416b0a68b5e2734e9c",
+    "https://esm.sh/lodash@4.17.21": "c2f90ffd948b7a30f054986888bdc2667824115fa48ad583ca8b3a579ca4a5a8",
+    "https://esm.sh/lodash@4.17.21/denonext/lodash.mjs": "9d2a44e584d91008f61f974c6d0a32bf9afb1563761e60c366af0a293e8c759b",
+    "https://esm.sh/nanostores@0.11.4": "090eb82118635dd654d2bd983741bd6dc2a809af96ea175c896da7fc1a34ebd8",
+    "https://esm.sh/nanostores@0.11.4/denonext/nanostores.mjs": "0f3a82d0a93671bbb67887a02d3b1eff7fb93654add5e3d654d2278265902539",
+    "https://esm.sh/vue@3.5.13": "3bdd74ed7c956d5a5066af171b36e6834035425fe92d14719eb543f39e98e898",
+    "https://esm.sh/vue@3.5.13/denonext/dist/vue.esm-bundler.mjs": "44380efd40e9affb87d6916d1353120f2db142bfe0caaca3944da99fdcee22a5",
+    "https://esm.sh/vue@3.5.13/denonext/vue.development.mjs": "e796d3ed49ff675ee109d2bb3df8ad7082eec2b4e5b07dc9653e29d73a954191",
+    "https://esm.sh/vue@3.5.13/denonext/vue.mjs": "5b449dad73f70839d63033ce2d5f894fbaec3647c9899c44ef8e86f54871f200",
+    "https://esm.sh/vue@3.5.13/dist/vue.esm-bundler.js": "9d724fe80b705d2b032f667ff550ded67384ff7b2ac6e2f8f80f5bdef6f4507f",
+    "https://esm.sh/vue@3.5.13?dev": "696e3cb364689c7fe98d52e895d6081801093b7e77ccd02a7a4c29b73badc403",
+    "https://esm.sh/vue@3.5.13?target=denonext": "3bdd74ed7c956d5a5066af171b36e6834035425fe92d14719eb543f39e98e898",
+    "https://unpkg.com/vue@3.5.13/dist/vue.cjs.js": "20a951599c856aeefb1108280bd8811e78a1b578075331d90396f74bed4ed791",
+    "https://unpkg.com/vue@3.5.13/dist/vue.cjs.prod.js": "ef58e264cf502f78c1e0b04f0119e71385c50fad5fa48708bf36a4b710f3e782",
+    "https://unpkg.com/vue@3.5.13/dist/vue.esm-browser.js": "549c46190db577538783547d20fff9d0996233969dfa90df9ba6898f5dca9573",
+    "https://unpkg.com/vue@3.5.13/index.js": "a5287f6056bc5c2c569d318063ee043f55a0d323fa7262f64456d58fd574f928"
+  }
+}
