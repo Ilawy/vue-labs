@@ -1,0 +1,28 @@
+{
+  products: [
+    {
+      id: 100,
+      name: "product Lol",
+      price: 1000,
+      instock: 5,
+      description: "product One is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+      image: "https://unsplash.it/286/180?r=1",
+    },
+    {
+      id: "4d50",
+      name: "personal spring boot alphanumric stinger",
+      price: 123,
+      instock: 12,
+      description: "Smallest xv40 lol create an image",
+      image: "https://unsplash.it/286/180",
+    },
+    {
+      id: "3b9e",
+      name: "jumia 9mm weapon",
+      price: 2400,
+      instock: 1,
+      description: "The best weapon out there",
+      image: "https://unsplash.it/286/180?r=2",
+    },
+  ],
+}

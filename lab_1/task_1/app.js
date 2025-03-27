@@ -12,7 +12,7 @@ const vue = Vue.createApp({
     showWishlist: false
   }),
   async created() {
-    const result = await fetch("/books.json").then((d) => d.json());
+    const result = await fetch("./books.json").then((d) => d.json());
     this.data = _.chunk(result, 3);
     this.loading = false;
   },
