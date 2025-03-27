@@ -11,7 +11,14 @@
             }}{{ item.description.length > 64 ? "..." : "" }}
           </p>
           <h5>{{ $currency(item.price) }}</h5>
-          <a href="#" class="btn btn-primary">Add to cart</a>
+          {{ cart.getItemQuantity(item.id) >= item.instock }}
+          {{ cart.getItemQuantity(item.id) >= item.instock }}
+          <a
+            @click.prevent="cart.addItem(item.id)"
+            :disabled="cart.getItemQuantity(item.id) >= item.instock"
+            class="btn btn-primary"
+            >Add to cart</a
+          >
         </div>
       </div>
     </section>
@@ -20,6 +27,8 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
+import { useCartStore } from "../stores/cart.store";
+const cart = useCartStore();
 
 const data = ref([]);
 const loading = ref(true);
