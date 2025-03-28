@@ -5,16 +5,16 @@
       <div v-for="item in data" class="card" style="width: 18rem">
         <img :src="item.image" class="card-img-top" alt="..." />
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">{{ item.name }}</h5>
+          <RouterLink :to="`/products/${item.id}`">
+            <h5 class="card-title">{{ item.name }}</h5>
+          </RouterLink>
           <p class="card-text flex-grow-1">
             {{ item.description.slice(0, 64)
             }}{{ item.description.length > 64 ? "..." : "" }}
           </p>
           <h5>{{ $currency(item.price) }}</h5>
-          {{ cart.getItemQuantity(item.id) >= item.instock }}
-          {{ cart.getItemQuantity(item.id) >= item.instock }}
           <a
-            @click.prevent="cart.addItem(item.id)"
+            @click.prevent="cart.addItem(item)"
             :disabled="cart.getItemQuantity(item.id) >= item.instock"
             class="btn btn-primary"
             >Add to cart</a
@@ -54,5 +54,12 @@ onMounted(async () => {
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+*[disabled="true"] {
+  background: gray;
+  border-color: transparent;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 </style>

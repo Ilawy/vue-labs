@@ -6,12 +6,14 @@ import Header from "./components/Header.vue";
 
 <template>
   <main>
-    <Toaster />
+    <Toaster position="top-center" rich-colors />
 
     <Header />
     <router-view v-slot="{ Component }">
       <keep-alive>
-        <component :is="Component" />
+        <Suspense>
+          <component :is="Component" />
+        </Suspense>
       </keep-alive>
     </router-view>
   </main>

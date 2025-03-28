@@ -57,7 +57,6 @@
       </div>
     </form>
   </div>
-  {{ JSON.stringify(errors) }}
 </template>
 
 <script setup>

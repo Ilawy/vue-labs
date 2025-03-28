@@ -6,6 +6,9 @@
           <router-link to="/cart">
             <button class="btn btn-primary">Cart</button>
           </router-link>
+          <router-link to="/products/new">
+            <button class="btn btn-primary">+</button>
+          </router-link>
       </div>
     </div>
 

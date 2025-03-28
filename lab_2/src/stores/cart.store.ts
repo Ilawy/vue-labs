@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import { reactive } from "vue";
+import { toast } from "vue-sonner";
 
 const trycatch = <V, D>(fn: () => V, def: D): D | V => {
   try {
@@ -11,7 +12,7 @@ const trycatch = <V, D>(fn: () => V, def: D): D | V => {
 
 interface CartItem {
   quantity: number;
-  item: number | string;
+  item: { id: string | number; instock: number };
 }
 
 export const useCartStore = defineStore("cart", () => {
@@ -20,23 +21,46 @@ export const useCartStore = defineStore("cart", () => {
       ? trycatch(() => JSON.parse(localStorage["cart"]), [])
       : []
   );
-  function addItem(id: number | string) {
-    const foundIndex = this.items.findIndex((item) => item.item == id);
+  console.log(items[0]);
+
+  function addItem(item: CartItem["item"]) {
+    const foundIndex = items.findIndex((it) => it.item.id == item.id);
     if (foundIndex >= 0) {
-      this.items[foundIndex].quantity++;
+      if (items[foundIndex].quantity >= item.instock) {
+        toast.error("instock quantity is not enough");
+        return;
+      }
+      items[foundIndex].quantity++;
     } else {
-      this.items.push({
+      items.push({
         quantity: 1,
-        item: id,
+        item,
       });
     }
-    localStorage["cart"] = JSON.stringify(this.items);
-    console.log(localStorage);
+    toast.success("Item added")
+    localStorage["cart"] = JSON.stringify(items);
   }
 
-  function getItemQuantity(id: number | string){
-    return items.find(item=>item.item == id)?.quantity || 0;
+  function removeItem(item: CartItem["item"], completely = false) {
+    const foundIndex = items.findIndex((it) => it.item.id == item.id);
+    if (foundIndex < 0) return;
+
+    if (completely || items[foundIndex].quantity <= 1) items.splice(foundIndex, 1);
+    else {
+      items[foundIndex].quantity--;
+    }
+    toast.info("Item removed")
+
+    localStorage["cart"] = JSON.stringify(items);
   }
 
-  return { items, addItem, getItemQuantity };
+  function getItemQuantity(id: number | string) {
+    return items.find((item) => item.item.id == id)?.quantity || 0;
+  }
+
+  function getProductInfo(id: number | string) {
+    return fetch(`http://localhost:3000/products/${id}`).then((d) => d.json());
+  }
+
+  return { items, addItem, removeItem, getItemQuantity, getProductInfo };
 });
